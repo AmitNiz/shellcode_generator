@@ -2,10 +2,8 @@
 
 if [[ $(uname -s) == "Linux" ]]
 then
-  echo Linux
   DIR_PATH=/opt/shellcode_generator
 else
-  echo Mac
   DIR_PATH=/usr/local/opt/shellcode_generator
 fi
 
