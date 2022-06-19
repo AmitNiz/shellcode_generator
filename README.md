@@ -17,7 +17,7 @@ shellcode generator for x86
   \_____|\___|_| |_|\___|_|  \__,_|\__\___/|_|
 
 
-usage: shellcode_generator.py [-h] [-a ARCH] [-f FORMAT] [-v] IFILE
+usage: shcg [-h] [-a ARCH] [-f FORMAT] [-v] IFILE
 
 positional arguments:
   IFILE                 input file
