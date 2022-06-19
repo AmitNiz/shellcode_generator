@@ -23,7 +23,7 @@ banner = '''
   \_____|\___|_| |_|\___|_|  \__,_|\__\___/|_|   
                                                  
 
-  ** Build by Amit Nizri - https://github.com/AmitNiz **
+  ** https://github.com/AmitNiz/shellcode_generator.git **
 '''
 if len(sys.argv) == 1 or '-h' in sys.argv or '--help' in sys.argv:
 	print(banner)
