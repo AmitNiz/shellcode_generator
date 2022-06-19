@@ -69,12 +69,17 @@ if __name__ == '__main__':
 	#compile the assembly file
 	res = subprocess.run(f'nasm -f {args.arch} -o {obj_file.name} {asm_file.name}',capture_output=True,shell=True)
 	if res.returncode:
-		print(f"[!] ERROR: {res.stderr.decode().split(':')[3]}")
+		print("[!] ERROR: failed to compile. check your code.")
 		os.unlink(asm_file.name)
 		exit(res.returncode)
 
 	#disassemble
-	res = subprocess.run(f'objdump -d --x86-asm-syntax=att {obj_file.name}',capture_output=True,shell=True)
+	res = subprocess.run(f'objdump -d -M att {obj_file.name}',capture_output=True,shell=True)
+	if res.returncode:
+		print('[!] ERROR: failed to disassemble.')
+		os.unlink(asm_file.name)
+		os.unlink(obj_file.name)
+		exit(res.returncode)
 
 	#delete temporary files
 	os.unlink(asm_file.name)
