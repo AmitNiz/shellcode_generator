@@ -6,7 +6,6 @@ import tempfile
 import argparse
 
 WRAPPER_FILE = f'{__file__}/wrapper.asm'
-print(WRAPPER_FILE)
 
 
 banner = '''
