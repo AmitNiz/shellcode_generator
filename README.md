@@ -32,7 +32,7 @@ options:
 ```
 
 ### # Installation (linux or mac)
-      curl https://raw.githubusercontent.com/AmitNiz/shellcode_generator/main/install.sh | sh
+      curl https://raw.githubusercontent.com/AmitNiz/shellcode_generator/main/install.sh | bash
 
 ### # Troubleshooting
 make sure that you have `nasm` and `objdump` installed and accessible from shell.
