@@ -1,10 +1,10 @@
 #! /usr/bin/env python3
+from binascii import unhexlify
 import os,sys
 import re
 import subprocess
 import tempfile
 import argparse
-
 WRAPPER_FILE = f'{os.path.dirname(os.path.realpath(__file__))}/wrapper.asm'
 
 
@@ -95,7 +95,7 @@ if __name__ == '__main__':
 		print('\n[+] shellcode:')
 		print('-'*30)
 	if args.format == 'hex':
-		print(''.join([chr(int(op,16)) for op in opcodes]))
+		sys.stdout.buffer.write(unhexlify(''.join(opcodes)))
 	else:
 		print(f'{args.format}'+f'{args.format}'.join(opcodes))
 
