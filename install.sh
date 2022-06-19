@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [ "$(uname -s)" == "Linux" ]
+if [[ "$(uname -s)" == "Linux" ]]
 then
   DIR_PATH=/opt/shellcode_generator
 else
