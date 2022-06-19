@@ -31,8 +31,8 @@ options:
   -v, --verbose         verbose mode
 ```
 
-### Installation (linux or mac)
+### # Installation (linux or mac)
       curl https://raw.githubusercontent.com/AmitNiz/shellcode_generator/main/install.sh | sh
 
-### Troubleshooting
+### # Troubleshooting
 make sure that you have `nasm` and `objdump` installed and accessible from shell.
