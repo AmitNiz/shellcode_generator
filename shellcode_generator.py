@@ -5,8 +5,8 @@ import subprocess
 import tempfile
 import argparse
 
-WRAPPER_FILE = './wrapper.asm'
-
+WRAPPER_FILE = f'{__file__}/wrapper.asm'
+print(WRAPPER_FILE)
 
 
 banner = '''
