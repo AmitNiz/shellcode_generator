@@ -91,7 +91,7 @@ if __name__ == '__main__':
 		print(f'[+] shellcode length: {len(opcodes)}')
 		print('\n[+] objdump output:')
 		print('-'*30)
-		print(''.join(re.findall(r'\s+\w+: [\S.\s]*',res.stdout.decode())))
+		print(''.join(re.findall(r'\s+\w+:.*',res.stdout.decode())))
 		print('\n[+] shellcode:')
 		print('-'*30)
 	if args.format == 'hex':
