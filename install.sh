@@ -1,6 +1,12 @@
 #!/usr/bin/env sh
 
-DIR_PATH=/usr/local/opt/shellcode_generator
+if [[ $(uname -s) =='Linux' ]]
+then
+  DIR_PATH=/opt/shellcode_generator
+else
+  DIR_PATH=/usr/local/opt/shellcode_generator
+fi
+
 LINK_PATH=/usr/local/bin
 LINK_NAME=shcg
 
